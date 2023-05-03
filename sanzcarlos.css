@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "JetBrains Mono NL Nerd Font";
+    src:    local(JetBrains Mono Bold NL Nerd Font Complete),
+            url("fonts/JetBrainsMonoNLNerdFontMono-Bold.ttf") format("truetype");
+}
