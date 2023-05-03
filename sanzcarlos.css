@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "JetBrains Mono NL Nerd Font";
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
     src:    local(JetBrains Mono Bold NL Nerd Font Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-Bold.ttf") format("truetype");
             font-stretch: normal;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "JetBrains Mono NL Nerd Font";
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
     src:    local(JetBrains Mono Light NL Nerd Font Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-Light.ttf") format("truetype");
             font-stretch: normal;
@@ -17,8 +17,8 @@
 }
 
 @font-face {
-    font-family: "JetBrains Mono NL Nerd Font";
-    src:    local(JetBrains Mono NL Nerd Font Complete),
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
+    src:    local(JetBrainsMonoNL Nerd Font Mono Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-Regular.ttf") format("truetype");
             font-stretch: normal;
             font-style: normal;
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: "JetBrains Mono NL Nerd Font";
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
     src:    local(JetBrains Mono Italic NL Nerd Font Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-Italic.ttf") format("truetype");
             font-stretch: normal;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: "JetBrains Mono NL Nerd Font";
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
     src:    local(JetBrains Mono Light Italic NL Nerd Font Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-LightItalic.ttf") format("truetype");
             font-stretch: normal;
