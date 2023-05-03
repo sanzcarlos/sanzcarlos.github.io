@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "JetBrainsMonoNL Nerd Font Mono";
+    font-family: "sanzcarlos JetBrainsMonoNL Nerd Font Mono";
     src:    local(JetBrains Mono Light NL Nerd Font Complete),
             url("fonts/JetBrainsMonoNLNerdFontMono-Light.ttf") format("truetype");
             font-stretch: normal;
