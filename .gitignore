@@ -89,3 +89,4 @@ ENV/
 
 # Visual Studio Code Configuration
 .vscode/
+node_modules
