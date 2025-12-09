@@ -1,47 +1,19 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- Source lives in `src/`:
-  - `src/pages/` routes (`.astro`), kebab-case (e.g., `about/index.astro`).
-  - `src/components/` reusable components, PascalCase (e.g., `Welcome.astro`).
-  - `src/layouts/` shared page layouts.
-  - `src/assets/` images/svg used by components.
-- Static files in `public/` are served at `/`.
-- Build output goes to `dist/`.
+All source resides in `src/`. Pages live under `src/pages/` and follow kebab-case folder names such as `about/index.astro`. Reusable UI goes in `src/components/` with PascalCase names, while shared wrappers belong in `src/layouts/`. Images or SVGs used by components sit in `src/assets/`, and any static files exposed verbatim belong in `public/`. Tests, when created, should mirror the feature tree under `tests/` (e.g., `tests/pages/home.spec.ts`). Production builds output to `dist/`, so never edit that folder manually.
 
 ## Build, Test, and Development Commands
-- `pnpm install` — install dependencies.
-- `pnpm dev` — start dev server at `http://localhost:4321`.
-- `pnpm build` — produce production build into `dist/`.
-- `pnpm preview` — serve the built site locally.
-- `pnpm astro check` — run Astro diagnostics/type checks.
+Run `pnpm install` once per environment to sync dependencies. Use `pnpm dev` to start the Astro dev server on `http://localhost:4321` for rapid iteration. Execute `pnpm build` to emit an optimized bundle in `dist/`, and `pnpm preview` to serve that build locally for smoke checks. `pnpm astro check` runs the official diagnostics and TypeScript validation enforced by `tsconfig.json`.
 
 ## Coding Style & Naming Conventions
-- Indentation: 4 spaces; keep lines concise; prefer descriptive names.
-- Components: PascalCase in `src/components/` (e.g., `HeroBanner.astro`).
-- Pages: kebab-case in `src/pages/` (e.g., `blog-post.astro`).
-- Assets: lowercase-hyphen names in `src/assets/` and `public/`.
-- Keep components focused; prefer server-rendered content and Astro islands only when needed.
-- TypeScript config is strict via `tsconfig.json`; fix type warnings before merging.
+Follow 4-space indentation and concise line lengths. Prefer declarative, server-rendered Astro components, introducing islands only when client interactivity is essential. Components use PascalCase filenames, pages keep kebab-case, and asset names use lowercase-hyphen patterns. Keep modules focused, export typed interfaces when sharing data, and resolve lint or type warnings before committing.
 
 ## Testing Guidelines
-- No test runner is configured yet. If adding tests:
-  - Unit: prefer Vitest for utility modules.
-  - E2E: prefer Playwright for core routes.
-  - Mirror structure under `tests/` (e.g., `tests/pages/index.spec.ts`).
-  - Aim for smoke coverage on key pages (home, critical layouts).
+No runner ships today, but choose Vitest for units (e.g., `tests/components/HeroBanner.spec.ts`) and Playwright for route smoke tests (e.g., `tests/pages/index.spec.ts`). Mirror the source structure, keep assertions minimal yet meaningful, and document any required fixtures. Include a short test plan in PRs describing how to run the suite.
 
 ## Commit & Pull Request Guidelines
-- Current history has no set convention; use Conventional Commits:
-  - `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`, `perf:`, `test:`
-  - Example: `feat(components): add HeroBanner with CTA`
-- PRs should include:
-  - Clear description and motivation; link issues.
-  - Screenshots/GIFs of UI changes.
-  - Steps to verify locally (commands, pages to visit).
-  - Small, focused diffs; update docs when needed.
+Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.) with scoped messages when possible, such as `feat(pages): add about hero`. Each PR should describe motivation, link relevant issues, attach screenshots or GIFs for UI deltas, and list verification steps (`pnpm build`, page URLs). Keep diffs focused, update docs alongside code, and resolve review feedback promptly.
 
 ## Security & Configuration Tips
-- Do not commit secrets. Use `.env` files (git-ignored) and access via Astro environment APIs.
-- Keep `astro.config.mjs` minimal; prefer static assets and lightweight client JS.
-- Validate external links/assets in PRs to avoid broken content.
+Never commit secrets; load runtime configuration from `.env` files (already git-ignored) and consume values via Astro’s environment APIs. Favor static assets over heavy client bundles, and keep `astro.config.mjs` minimal to maintain fast builds. Validate third-party links before merging to avoid broken or malicious references.
