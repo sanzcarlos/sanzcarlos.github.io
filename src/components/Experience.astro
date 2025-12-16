@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        title: "Flowbite Figma v1.3.0",
+        date: "January 09th, 2025",
+        latest: true,
+        description:
+            "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+    },
+    {
+        title: "Flowbite Figma v1.2.0",
+        date: "January 09th, 2024",
+        description:
+            "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+    },
+    {
+        title: "Flowbite Figma v1.1.0",
+        date: "January 09th, 2023",
+        description:
+            "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+    },
+    {
+        title: "Flowbite Figma v1.0.0",
+        date: "January 09th, 2022",
+        description:
+            "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+    },
+];
+---
+
+<ol class="relative border-s border-default">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
