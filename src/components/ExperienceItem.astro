@@ -10,13 +10,15 @@ interface ExperienceItemProps {
 }
 
 const { title, description, latest, date, link } = Astro.props;
+
+import Badge from "./Badge.astro";
 ---
 
 <span
-    class="absolute flex items-center justify-center w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8 ring-buffer"
+    class="absolute flex items-center justify-center size-6 bg-brand-softer rounded-full -start-3 ring-8 ring-buffer"
 >
     <svg
-        class="w-3 h-3 text-fg-brand-strong"
+        class="size-7 text-blue-900"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -32,21 +34,21 @@ const { title, description, latest, date, link } = Astro.props;
         ></path></svg
     >
 </span>
-<time
-    class="bg-neutral-secondary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded"
-    >{date}</time
+<Badge class="ml-3">{date}</Badge>
+
+<h3
+    class="flex items-center mb-1 text-lg font-semibold text-heading dark:text-blue-400 my-2"
 >
-<h3 class="flex items-center mb-1 text-lg font-semibold text-heading my-2">
     {title}
     {
         latest && (
-            <span class="ms-2 bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded">
-                Latest
-            </span>
+            <>
+                <Badge class="ml-3">Latest</Badge>
+            </>
         )
     }
 </h3>
-<p class="mb-4 text-body">{description}</p>
+<p class="mb-4 text-body dark:text-white">{description}</p>
 {
     link && (
         <a

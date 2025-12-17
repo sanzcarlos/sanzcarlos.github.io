@@ -7,6 +7,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import LinkedinIcon from "../components/icons/LinkedIn.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import MailIcon from "../components/icons/mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
 
 import Layout from "../layouts/Layout.astro";
 
@@ -54,7 +55,9 @@ import Experience from "../components/Experience.astro";
         </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-        <h2 class="text-2xl font-semibold id=">Experiencia Laboral</h2>
+        <h2 class="text-2xl font-semibold flex gap-x-2 mb-6 items-center">
+            <BriefcaseIcon class="size-7" /> Experiencia Laboral
+        </h2>
         <Experience />
     </SectionContainer>
 </Layout>
