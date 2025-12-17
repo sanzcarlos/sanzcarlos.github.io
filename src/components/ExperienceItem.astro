@@ -1,15 +1,18 @@
 ---
-import type { ACTION_ERROR_CODES } from "astro:actions";
+import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS } from "astro:actions";
 
 interface ExperienceItemProps {
     title: string;
     description: string;
-    date: string;
+    company: string;
+    datestart: string;
+    dateend: string;
     latest?: boolean;
     link?: string;
 }
 
-const { title, description, latest, date, link } = Astro.props;
+const { title, description, company, latest, datestart, dateend, link } =
+    Astro.props;
 
 import Badge from "./Badge.astro";
 ---
@@ -34,11 +37,10 @@ import Badge from "./Badge.astro";
         ></path></svg
     >
 </span>
-<Badge class="ml-3">{date}</Badge>
+<Badge class="ml-3">{datestart}</Badge>
+{dateend && <Badge class="ml-3">{dateend}</Badge>}
 
-<h3
-    class="flex items-center mb-1 text-lg font-semibold text-heading dark:text-blue-400 my-2"
->
+<h3 class="text-xl font-bold text-gray-600 dark:text-blue-300">
     {title}
     {
         latest && (
@@ -48,7 +50,11 @@ import Badge from "./Badge.astro";
         )
     }
 </h3>
-<p class="mb-4 text-body dark:text-white">{description}</p>
+<h4 class="font-semibold text-xl text-gray-600 dark:text-indigo-300">
+    {company}
+</h4>
+
+<p class="mb-4 text-body dark:text-gray-50">{description}</p>
 {
     link && (
         <a
