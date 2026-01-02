@@ -47,3 +47,10 @@ Open `http://localhost:4321`.
 
 - Main page: `src/pages/index.astro`
 - Build output goes to `dist/`
+
+## Known Warnings
+
+`pnpm check` reports these warnings:
+
+- `src/components/ExperienceItem.astro`: `ExperienceItemProps` declared but not used.
+- `src/components/ExperienceItem.astro`: unused imports from `astro:actions`.
