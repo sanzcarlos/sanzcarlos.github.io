@@ -10,10 +10,10 @@
         "check": "astro check"
     },
     "dependencies": {
-        "@astrojs/check": "^0.9.6",
+        "@astrojs/check": "0.9.6-beta.1",
         "@fontsource-variable/mulish": "^5.2.8",
         "@tailwindcss/vite": "^4.1.18",
-        "astro": "^5.16.9",
+        "astro": "6.0.0-beta.1",
         "flowbite": "^4.0.1",
         "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3"

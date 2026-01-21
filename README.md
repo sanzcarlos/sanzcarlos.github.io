@@ -5,7 +5,7 @@ with reusable components and a lightweight static build.
 
 ## Tech Stack
 
-- Astro 5
+- Astro 6 beta
 - Tailwind CSS 4
 - Flowbite
 - TypeScript
@@ -45,6 +45,7 @@ Open `http://localhost:4321`.
 
 ## Notes
 
+- Using Astro 6 beta while it is in preview.
 - Main page: `src/pages/index.astro`
 - Build output goes to `dist/`
 
