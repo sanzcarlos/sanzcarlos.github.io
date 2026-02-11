@@ -13,7 +13,7 @@
         "@astrojs/check": "0.9.7-beta.1",
         "@fontsource-variable/mulish": "^5.2.8",
         "@tailwindcss/vite": "^4.1.18",
-        "astro": "6.0.0-beta.9",
+        "astro": "6.0.0-beta.10",
         "flowbite": "^4.0.1",
         "tailwindcss": "^4.1.18",
         "typescript": "^5.9.3"
