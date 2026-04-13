@@ -1,15 +1,4 @@
 ---
-import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS } from "astro:actions";
-
-interface ExperienceItemProps {
-    title: string;
-    description: string;
-    company: string;
-    datestart: string;
-    dateend: string;
-    latest?: boolean;
-    link?: string;
-}
 
 const { title, description, company, latest, datestart, dateend, link } =
     Astro.props;
