@@ -10,12 +10,17 @@
         "check": "astro check"
     },
     "dependencies": {
-        "@astrojs/check": "0.9.7-beta.1",
+        "@astrojs/check": "0.9.8",
         "@fontsource-variable/mulish": "^5.2.8",
         "@tailwindcss/vite": "^4.2.2",
         "astro": "6.1.5",
         "flowbite": "^4.0.1",
         "tailwindcss": "^4.2.2",
         "typescript": "^6.0.2"
+    },
+    "pnpm": {
+        "overrides": {
+            "yaml": ">=2.8.3"
+        }
     }
 }
