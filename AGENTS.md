@@ -22,7 +22,7 @@ Follow 4-space indentation and concise line lengths. Prefer declarative, server-
 No runner ships today, but choose Vitest for units (e.g., `tests/components/HeroBanner.spec.ts`) and Playwright for route smoke tests (e.g., `tests/pages/index.spec.ts`). Mirror the source structure, keep assertions minimal yet meaningful, and document any required fixtures. Include a short test plan in PRs describing how to run the suite.
 
 ## Commit & Pull Request Guidelines
-Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.) with scoped messages when possible, such as `feat(pages): add about hero`. Each PR should describe motivation, link relevant issues, attach screenshots or GIFs for UI deltas, and list verification steps (`pnpm build`, page URLs). Keep diffs focused, update docs alongside code, and resolve review feedback promptly. If a PR template exists in `.github/pull_request_template.md`, follow it.
+Use Conventional Commits (`feat:`, `fix:`, `docs:`, etc.) with scoped messages when possible, such as `feat(pages): add about hero`. Each PR should describe motivation, link relevant issues, attach screenshots or GIFs for UI deltas, and list verification steps (`pnpm build`, page URLs). Keep diffs focused, update docs alongside code, and resolve review feedback promptly. Update `CHANGELOG.md` for every user-facing, configuration, dependency, workflow, or documentation change. If a PR template exists in `.github/pull_request_template.md`, follow it.
 
 ## Review Changes
 Recommended commands:
@@ -44,6 +44,7 @@ Never commit secrets; load runtime configuration from `.env` files (already git-
 - Relevant checks/tests executed or documented as not available
 - No new lint/type warnings
 - Docs updated if behavior or configuration changes
+- `CHANGELOG.md` updated with the change or explicitly left unchanged when there is no project impact
 - Screenshots captured for UI changes
 - Diff reviewed end-to-end for secrets and regressions
 
@@ -52,6 +53,7 @@ Never commit secrets; load runtime configuration from `.env` files (already git-
 - [ ] Tests or checks run (or noted as not available)
 - [ ] No secrets or credentials introduced
 - [ ] Docs/README updated if needed
+- [ ] CHANGELOG updated for project changes
 - [ ] PR description includes summary, test steps, and risks
 
 ## Agent Playbook
@@ -63,6 +65,7 @@ Never commit secrets; load runtime configuration from `.env` files (already git-
 ### While Changing Code
 - Keep changes small and traceable
 - Update or add tests/docs as needed
+- Add a concise entry to `CHANGELOG.md` under `Unreleased` for each project change
 - Avoid introducing new dependencies unless required
 
 ### Before Opening a PR
