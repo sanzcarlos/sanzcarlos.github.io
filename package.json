@@ -17,10 +17,5 @@
         "flowbite": "^4.0.1",
         "tailwindcss": "^4.2.2",
         "typescript": "^6.0.2"
-    },
-    "pnpm": {
-        "overrides": {
-            "yaml": ">=2.8.3"
-        }
     }
 }
