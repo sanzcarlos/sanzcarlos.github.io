@@ -12,6 +12,9 @@ and this project uses version numbers from `package.json` when available.
 
 ### Changed
 - Updated agent guidelines to require maintaining `CHANGELOG.md` with each project change.
+- Updated agent guidelines to require a patch version bump before each commit unless explicitly skipped.
+- Updated Astro from `6.1.5` to `6.3.7`.
+- Bumped project version to `0.2.2`.
 
 ## [0.2.1]
 
