@@ -7,6 +7,26 @@ and this project uses version numbers from `package.json` when available.
 
 ## [Unreleased]
 
+## [0.2.4]
+
+### Changed
+- Updated project dependencies to their latest available versions, including Astro.
+- Bumped project version to `0.2.4`.
+
+## [0.2.3]
+
+### Added
+- Added Playwright end-to-end tests for the home page under `tests/pages/index.spec.ts`.
+- Added `playwright.config.ts` with Chromium project targeting the preview server.
+- Added `test`, `test:ui`, and `test:report` scripts to `package.json`.
+- Added `@playwright/test` as a dev dependency.
+- Tests cover: page title, meta description, header navigation, hero section, badges, social links, work experience timeline (all 5 entries), projects section, footer, and basic accessibility checks.
+
+### Changed
+- Bumped project version to `0.2.3`.
+
+## [0.2.2]
+
 ### Added
 - Added this changelog to document project changes going forward.
 
